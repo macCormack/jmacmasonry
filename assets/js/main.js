@@ -254,7 +254,7 @@ $("#contact").submit(function(e) {
         $('#contact')[0].reset();
 
         setTimeout(function() {
-            $('.form-messages-inner').removeClass(messageAlert);
+            $('.form-messages-inner').removeClass('success');
             $('.form-messages-inner').empty();
         }, 6000);
 });
