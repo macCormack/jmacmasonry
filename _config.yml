@@ -1,0 +1,35 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing these this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+# BACKUP ABOUT Created in 2000, JMac Masonry is a family run buisness that prides itself on doing things right the first time. We provide superior craftsmanship at an affordable rate.
+title: JMac Masonry
+email: info@jmacmasonry.com
+description: > # this means to ignore newlines until "baseurl:"
+  We are your Toronto masonry restoration company. We offer brick repair, parging, pointing, chimney rebuild or restoration, stone work and much more.
+about: > # this means to ignore newlines until "baseurl:"
+  JMac Masonry, specializing in restoration offers top quality masonry solutions. With more than 30 years of experince we can handle all of your restoration needs. From brick replacement to parging, tuck pointing, chimney repair, doors & windows, concrete patch and stone work.  
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  jekyll
+
+google_analytics: UA-135473854-1
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+sass:
+  sass_dir: assets/css/partials

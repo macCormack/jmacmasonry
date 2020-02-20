@@ -1,0 +1,268 @@
+//
+//  Table of Contents:
+//   
+//   1. Hero
+//   2. Icon Panel
+//   3. Recent work
+//   4. Reviews
+//   5. Gallery
+//   6. Contact Form
+//   7. Owl carousel
+//   8. Free Estimate Form
+//   9. SnapSVG Buttons
+
+// 1. Hero
+// ---------
+
+.hero {
+  position: relative;
+  padding: 0 0 30px;
+  height: 350px;
+  background: url('../img/home.jpg') no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+
+  // svg {
+  //   @include column();
+  //   width: 75%;
+  //   height: 100%;
+  //   margin: .5em auto;
+    
+  //   .cls-2 {
+  //     fill: $white;
+  //   }
+  // }
+
+  h1 {
+    margin: 0 0 .5em;
+  }
+}
+
+.hero-tagline {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right:0;
+  padding: 2em 1em;
+  margin-top: -120px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  color: $white;
+  background: rgba(0,0,0,.78);
+  text-align: center;
+}
+
+// 2. Icon Panel
+// ---------
+
+.icon-panel__item {
+  position: relative;
+  margin: 1rem;
+  @include small-12();
+  background: $panel-bg;
+  color: $grey;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.icon-panel__inner {
+  padding: 1em;
+}
+
+.icon-panel__icon {
+  position: absolute;
+  top: -22px;
+  left: calc(50% - 22px);
+  padding: .5em;
+  background: $primary;
+  border-radius: 50px;
+
+  svg {
+    width: rem-calc(28px);
+    height: rem-calc(28px);
+    vertical-align: middle;
+    fill: $white;
+  }
+}
+
+.icon-panel__title {
+  text-align: center;
+}
+
+// 3. Recent Work
+// ---------
+.recent-work-item {
+  flex-basis: 90%;
+  margin: 0 auto;
+  padding: 1em 0;
+  height: 366px;
+
+  img {
+    border: 1px solid $dark-grey;
+    height: 100%;
+  }
+}
+
+// 4. Reviews
+// ---------
+.testimonial-item {
+  flex-basis: calc(100% - 1.6em);
+  padding: 0 .8em;
+
+  h3 {
+    margin-bottom: 0;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+
+  span {
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+.homestars-review {
+  flex: 0 0 35%;
+  margin: 0 auto;
+}
+// 5. Gallery
+// ---------
+.gallery {
+
+  li {
+    @include small-12();
+    margin: 0 auto;
+    padding: .5em 0;
+
+    img {border: 1px solid $dark-grey;}
+  }
+}
+
+// 6. Contact Form
+// ---------
+.form-messages {
+  @include column();
+  @include small-12();
+}
+
+.form-messages-inner {
+  text-align: center;
+  padding: .6em;
+  max-width: 50%;
+  margin: 0 auto;
+  transition: background .3s ease;
+
+  &.success {
+    color: $jet;
+    background: $success;
+  }
+
+  &.error {
+    color: $white;
+    background: $error;
+  }
+}
+
+.form-group {
+  @include column();
+  @include small-12();
+  margin-bottom: 1rem;
+}
+
+.help-block {
+  color: $error;
+
+  li {
+    padding: .3em 0;
+  }
+}
+
+.has-error .form-control {
+  border-color: $error;
+}
+
+// 7. Owl Carousel
+// ---------
+.owl-carousel {
+  max-width: 300px;
+  width: 100%;
+}
+
+.owl-carousel.owl-drag {
+  cursor: -webkit-grab;
+}
+
+.testimonial-content {
+  padding: 20px 30px;
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+  position: absolute;
+  top: calc(50% - 40px);
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+  left: -15px ;
+  font-size: 3em;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+  right: -15px;
+  font-size: 3em;
+}
+
+// 8. Free Estimate Form
+// ---------
+.free-estimate-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: $white;
+  background: rgba(34,46,80, 1);
+  z-index: 99;
+  transform: translateY(120%);
+  perspective: 1000px;
+  visibility: hidden;
+  overflow: auto;
+  transition: transform 0.5s 0s, visibility 0.25s 0s;
+
+  &.active {
+    visibility: visible;
+    transform: translateY(0%);
+  }
+}
+
+.free-estimate-inner {
+  position: relative;
+  top: 15%;
+  margin: 0 auto;
+  max-width: 1200px;
+
+  h2, p{
+    padding: 0 .3em;
+  }
+}
+
+.free-estimate-close {
+  position: absolute;
+  top: 0;
+  right: .4em;
+  max-width: 80px;
+  height: 22px;
+}
+
+// 9. SnapSVG Buttons
+// ---------
+.snap-button {
+  position: absolute;
+  height: 100%;
+  pointer-events: none;
+
+  &.pos-right {
+    right: 0;
+  }
+}

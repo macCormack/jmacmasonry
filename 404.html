@@ -1,0 +1,20 @@
+---
+layout: default
+title: Error 404
+seoTitle: 
+description:
+permalink: /404.html
+---
+{% assign custom_url = site.url | append: site.baseurl %}
+<div class="center-container text-center">
+  <h1>ERROR 404</h1>
+  <h3>Sorry the page you requested <code id="pathname"></code> has been moved or doesn't exist.</h3>
+  <p>If you feel this is an error on our part please visit our <a href="/contact">Contact Page</a> to let us know.</p>
+</div>
+
+<script>
+  var ele = document.getElementById('pathname');
+  var pathname = window.location.pathname;
+
+  ele.prepend(pathname);
+</script>
