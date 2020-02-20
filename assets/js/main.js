@@ -119,19 +119,19 @@ function owlCarousel() {
 };
 
 //FREE ESTIMATE FORM
-function freeEstimate() {
-    var wrapper = $('.free-estimate-wrapper');
+// function freeEstimate() {
+//     var wrapper = $('.free-estimate-wrapper');
 
-    $('.quote-link').on('click', function (e) {
-        e.preventDefault();
-        $(wrapper).addClass('active');
-    })
+//     $('.quote-link').on('click', function (e) {
+//         e.preventDefault();
+//         $(wrapper).addClass('active');
+//     })
 
-    $('.free-estimate-close').on('click', function (e) {
-        e.preventDefault();
-        $(wrapper).removeClass('active');
-    })
-};
+//     $('.free-estimate-close').on('click', function (e) {
+//         e.preventDefault();
+//         $(wrapper).removeClass('active');
+//     })
+// };
 
 // var responseKey = '';
 // var apiKey = '6LdseI0UAAAAAGmfh8dBwZmHz8chPYZacx1XytQr';
