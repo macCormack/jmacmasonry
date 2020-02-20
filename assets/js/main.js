@@ -241,12 +241,18 @@ $("#contact").submit(function(e) {
   
     var $form = $(this);
     $.post($form.attr("action"), $form.serialize()).then(function() {
+
+        //Success message text.
+        var messageText = "Success! Thank you for your submission we will get back to you as soon as possible."
+
+        // let's compose an alert box HTML
+        var alertBox = '<span>' + messageText + '</span>';
+
         $('#contact').find('.form-messages-inner').html(alertBox);
         $('.form-messages-inner').addClass(messageAlert);
         // empty the form
         $('#contact')[0].reset();
-        grecaptcha.reset();
-
+        
         setTimeout(function() {
             $('.form-messages-inner').removeClass(messageAlert);
             $('.form-messages-inner').empty();
