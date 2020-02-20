@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     mobileNav();
     owlCarousel();
-    freeEstimate();
+    // freeEstimate();
 });
 
 if (top.location.pathname === '/') {
