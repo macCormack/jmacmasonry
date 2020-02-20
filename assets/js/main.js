@@ -249,10 +249,10 @@ $("#contact").submit(function(e) {
         var alertBox = '<span>' + messageText + '</span>';
 
         $('#contact').find('.form-messages-inner').html(alertBox);
-        $('.form-messages-inner').addClass(messageAlert);
+        $('.form-messages-inner').addClass('success');
         // empty the form
         $('#contact')[0].reset();
-        
+
         setTimeout(function() {
             $('.form-messages-inner').removeClass(messageAlert);
             $('.form-messages-inner').empty();
