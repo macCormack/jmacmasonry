@@ -240,22 +240,36 @@ $("#contact").submit(function(e) {
     e.preventDefault();
   
     var $form = $(this);
-    $.post($form.attr("action"), $form.serialize()).then(function() {
+    var empty = true;
 
-        //Success message text.
-        var messageText = "Success! Thank you for your submission we will get back to you as soon as possible."
+    $('#contact input[type="text"]').each(function(){
+        if($(this).val()!=""){
+           empty = false;
+           return false;
+         }
+      });
 
-        // let's compose an alert box HTML
-        var alertBox = '<span>' + messageText + '</span>';
+    if (empty === true) {
+        return null;
+    } else if( empty === false) {
 
-        $('#contact').find('.form-messages-inner').html(alertBox);
-        $('.form-messages-inner').addClass('success');
-        // empty the form
-        $('#contact')[0].reset();
-
-        setTimeout(function() {
-            $('.form-messages-inner').removeClass('success');
-            $('.form-messages-inner').empty();
-        }, 6000);
-});
+        $.post($form.attr("action"), $form.serialize()).then(function() {
+            
+            //Success message text.
+            var messageText = "Success! Thank you for your submission we will get back to you as soon as possible."
+            
+            // let's compose an alert box HTML
+            var alertBox = '<span>' + messageText + '</span>';
+            
+            $('#contact').find('.form-messages-inner').html(alertBox);
+            $('.form-messages-inner').addClass('success');
+            // empty the form
+            $('#contact')[0].reset();
+            
+            setTimeout(function() {
+                $('.form-messages-inner').removeClass('success');
+                $('.form-messages-inner').empty();
+            }, 6000);
+        });
+    }
   });
