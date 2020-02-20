@@ -241,6 +241,15 @@ $("#contact").submit(function(e) {
   
     var $form = $(this);
     $.post($form.attr("action"), $form.serialize()).then(function() {
-      alert("Thank you!");
-    });
+        $('#contact').find('.form-messages-inner').html(alertBox);
+        $('.form-messages-inner').addClass(messageAlert);
+        // empty the form
+        $('#contact')[0].reset();
+        grecaptcha.reset();
+
+        setTimeout(function() {
+            $('.form-messages-inner').removeClass(messageAlert);
+            $('.form-messages-inner').empty();
+        }, 6000);
+});
   });
