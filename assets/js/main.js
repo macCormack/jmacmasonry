@@ -133,15 +133,15 @@ function freeEstimate() {
     })
 };
 
-var responseKey = '';
-var apiKey = '6LdseI0UAAAAAGmfh8dBwZmHz8chPYZacx1XytQr';
+// var responseKey = '';
+// var apiKey = '6LdseI0UAAAAAGmfh8dBwZmHz8chPYZacx1XytQr';
 
-var cFormCaptcha = function (response) {
-    // console.log(response);
-    responseKey = response;
+// var cFormCaptcha = function (response) {
+//     // console.log(response);
+//     responseKey = response;
 
-    // console.log(responseKey);
-}
+//     // console.log(responseKey);
+// }
 
 //FORM VALIDATION
 // $(function () {
@@ -235,3 +235,12 @@ var cFormCaptcha = function (response) {
 //         }
 //     })
 // });
+
+$("#contact").submit(function(e) {
+    e.preventDefault();
+  
+    var $form = $(this);
+    $.post($form.attr("action"), $form.serialize()).then(function() {
+      alert("Thank you!");
+    });
+  });
