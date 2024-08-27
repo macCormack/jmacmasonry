@@ -25,7 +25,7 @@ url: "" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
-google_analytics: UA-135473854-1
+google_analytics: G-Z1T2EL4GMJ
 
 # Build settings
 markdown: kramdown
