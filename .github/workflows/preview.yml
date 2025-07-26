@@ -16,9 +16,9 @@ jobs:
           ref: develop
 
       - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.2'        # picks latest 3.2.x (e.g. 3.2.9)
+        - uses: ruby/setup-ruby@v1
+          with:
+            ruby-version: '2.7.8'
 
       - name: Install dependencies
         run: |
