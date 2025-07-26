@@ -18,7 +18,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.x'
+          ruby-version: '3.2'        # picks latest 3.2.x (e.g. 3.2.9)
 
       - name: Install dependencies
         run: |
